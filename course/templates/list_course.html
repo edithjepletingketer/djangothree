@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<table class="table table-striped">
+<button type="button"><a href="/course/add/">Add Me!</a></button>
+	<tr>
+		<th>Name</th>
+		<th>Months</th>
+		<th>Course number</th>
+		<th>Teacher</th>
+		<!-- <th>More</th> -->
+		<th>Course Description</th>
+		<th>Edit</th>
+	</tr>
+
+
+ {% for course in courses %}
+
+<tr>
+
+<td>{{course.name}}</td>
+<td>{{course.duration_in_months}}</td>
+<td>{{course.course_number}}</td>
+<td>{{course.teacher}}</td>
+<td>{{course.description}}</td>
+<!-- <td><a href="/course/detail/{{course.pk}}">More details</a></td> -->
+<td><a href="/course/edit/{{course.pk}}">Edit details</a></td>
+
+
+</tr>
+{%endfor%}
+
+</table>
+</div>
+</body>
+</html>

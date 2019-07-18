@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+	.cont{
+	width: 700px;
+	margin: 0 auto;
+	background-color: grey; 
+	}
+.head{
+    font-family: arial;
+	text-align: center;
+}
+.python{
+	padding: 30px;
+	margin: 0 auto;
+	background-color: #E4E4FC;
+	color: black;
+	font-family: arial;
+
+}
+
+	</style>
+
+</head>
+<body class="cont">
+   <h1 class="head">COURSE</h1>
+   <form class="python" method="POST"> {%csrf_token%}
+      {{form.as_p}}
+      <input type="submit">
+      	save
+      </input>
+      </form>
+</body>
+</html>

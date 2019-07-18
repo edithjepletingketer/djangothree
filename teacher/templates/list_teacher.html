@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<table class="table table-striped">
+<button type="button"><a href="/teacher/add/">Add Me!</a></button>
+	<tr>
+		<th>First_name</th>
+		<th>Last_Name</th>
+		<th>Registeration number</th>
+		<th>Profesion</th>
+		<th>More</th>
+		<th>Edit</th>
+	</tr>
+
+
+   <tr>
+   <td>Edith</td>
+   <td>Jepleting</td>
+   <td>001</td>	
+   <td>Teacher</td>
+
+   </tr>
+ {% for teacher in teachers %}
+
+<tr>
+
+<td>{{teacher.first_name}}</td>
+<td>{{teacher.last_name}}</td>
+<td>{{teacher.registeration_number}}</td>
+<td>{{teacher.profesion}}</td>
+<td><a href="/teacher/detail/{{teacher.pk}}">More details</a></td>
+<td><a href="/teacher/edit/{{teacher.pk}}">Edit details</a></td>
+
+
+</tr>
+{%endfor%}
+
+</table>
+</div>
+</body>
+</html>

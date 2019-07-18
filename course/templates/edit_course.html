@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.cont{
+	width: 700px;
+	margin: 0 auto;
+	background-color: #ccafca;
+}
+
+.head{
+	font-family: arial;
+	text-align: center;
+}
+.python{
+	padding: 30px;
+	margin: 0 auto;
+	background-color: #090121;
+	color: white;
+	font-family: arial;
+}
+
+   </style>
+</head>
+<body class="cont">
+      <h1 class="head">COURSE REGISTERATION</h1>
+      <form class="python" method="POST">{%csrf_token%}
+      {{form.as_p}}
+       <input type="submit">
+      	save
+      </input>
+      </form>
+</body>
+</html>
