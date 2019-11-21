@@ -3,6 +3,8 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from .forms import StudentForm
 from .models import Students
+from django.http import HttpResponseBadRequest
+
 
 
 
@@ -14,7 +16,10 @@ def add_student(request):
 		form=StudentForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return redirect("list_student")
+		else:
+			return HttpResponseBadRequest()
+			# return redirect("list_student")
+
 	else:
 		form=StudentForm()
 	return render(request,"add_student.html",{"form":form})
@@ -22,7 +27,7 @@ def add_student(request):
 def list_student(request):
 	students = Students.objects.all
 	return render(request,"list_student.html",
-		{"students":students})	
+		{"students":students})
 
 
 def student_detail(request,pk):

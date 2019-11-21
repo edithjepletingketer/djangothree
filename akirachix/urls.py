@@ -22,5 +22,7 @@ urlpatterns = [
     path('course/', include('course.urls')),
     path('teacher/', include('teacher.urls')),
     path('api/',include('api.urls')),
+    path("", include("core.urls")),
+    path('accounts/',include('registration.backends.default.urls')),
 ]
 

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +44,10 @@ INSTALLED_APPS = [
     'course',
     'api',
     'rest_framework',
+    'core',
+    'registration',
+
+
 
 ]
 
@@ -126,3 +131,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 django_heroku.settings(locals())
+LOGIN_REDIRECT_URL="/"
+STATIC_ROOT
+# MEDIA_ROOT
